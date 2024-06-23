@@ -30,14 +30,11 @@ jobs:
           dotnet-version: '7'
 
       - name: Install dependencies
-        working-directory: ../PingPong
-        run: dotnet restore
+        run: dotnet restore "../PingPong/PingPong.csproj"
       - name: Build
-        working-directory: ../PingPong
-        run: dotnet build
+        run: dotnet build "../PingPong/PingPong.csproj"
       - name: Test with the dotnet CLI
-        working-directory: ../PingPong
-        run: dotnet test
+        run: dotnet test "../PingPong/PingPong.csproj"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
