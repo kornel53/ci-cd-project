@@ -20,9 +20,7 @@ jobs:
         uses: actions/setup-dotnet@v4.0.0
         with:
           dotnet-version: '7'
-      
-      - name: List files
-        run: ls
+          
       - name: Install dependencies
         run: dotnet restore "../PingPong/PingPong.csproj"
       - name: Build
